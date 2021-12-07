@@ -1,6 +1,6 @@
 import kotlin.system.exitProcess
 
-val (plays, boards) = _2021_4_1.Input().load("../resources/input-4.txt")
+val (plays, boards) = _2021_04_1.Input().load("../resources/input-4.txt")
 
 var numNonWinningBoards = boards.size
 for (number in plays) {
