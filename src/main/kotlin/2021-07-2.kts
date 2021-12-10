@@ -1,6 +1,6 @@
 import kotlin.math.abs
 
-val filename = "input-7.txt"
+val filename = "input-07.txt"
 
 fun List<Int>.fuel(target: Int): Int = this.fold(0) { fuel, e -> fuel + (1..abs(e - target)).sum() }
 

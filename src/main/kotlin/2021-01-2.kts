@@ -1,4 +1,4 @@
-val lines = java.io.File("../resources/input-1.txt").readLines().asSequence()
+val lines = java.io.File("input-01.txt").readLines().asSequence()
 
 val r = lines
     .map { it.toInt() }

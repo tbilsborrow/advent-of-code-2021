@@ -1,4 +1,4 @@
-val lines = java.io.File("../resources/input-2.txt").readLines().asSequence()
+val lines = java.io.File("input-02.txt").readLines().asSequence()
 
 data class State(
     val position: Int = 0,

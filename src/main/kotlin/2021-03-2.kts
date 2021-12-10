@@ -1,4 +1,4 @@
-val lines = java.io.File("../resources/input-3.txt").readLines()
+val lines = java.io.File("input-03.txt").readLines()
 
 fun List<String>.rating(bigger: Boolean, index: Int = 0): Int {
     // assumes lines are all the same length

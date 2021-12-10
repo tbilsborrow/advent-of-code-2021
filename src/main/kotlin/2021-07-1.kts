@@ -1,6 +1,6 @@
 import kotlin.math.abs
 
-val filename = "input-7.txt"
+val filename = "input-07.txt"
 
 // if there's an evenly sized list, fuel calc is the same result
 // when picking anything between (inclusive) of the two middle elements

@@ -1,4 +1,4 @@
-val filename = "input-6.txt"
+val filename = "input-06.txt"
 
 // map of [timer value] -> [number of fish at that timer value]
 val state = java.io.File("../resources/$filename").readText().trim()

@@ -31,7 +31,7 @@ class Line(line: String) : Sequence<Point> {
         }
 }
 
-val lines = java.io.File("../resources/input-5.txt").readLines().asSequence()
+val lines = java.io.File("input-05.txt").readLines().asSequence()
 
 lines
     .map { Line(it) }

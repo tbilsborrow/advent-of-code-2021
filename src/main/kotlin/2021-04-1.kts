@@ -66,7 +66,7 @@ class Input {
     }
 }
 
-val (plays, boards) = Input().load("../resources/input-4.txt")
+val (plays, boards) = Input().load("input-04.txt")
 
 for (number in plays) {
     for (board in boards) {

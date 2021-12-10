@@ -1,4 +1,4 @@
-val lines = java.io.File("../resources/input-3.txt").readLines()
+val lines = java.io.File("input-03.txt").readLines()
 
 val numBits = lines.first().length
 var gamma = 0
