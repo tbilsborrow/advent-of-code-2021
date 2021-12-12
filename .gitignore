@@ -1,6 +1,5 @@
 .gradle
 .idea
-src/main/resources
 build*
 gradle*
 settings*
