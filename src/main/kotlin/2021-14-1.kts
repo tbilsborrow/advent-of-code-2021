@@ -25,4 +25,4 @@ val counts = polymer.fold(mutableMapOf<String, Long>()) { counters, element -> c
 
 val max = counts.maxOf { it.value }
 val min = counts.minOf { it.value }
-println(max - min)
+println(max - min) // 2233

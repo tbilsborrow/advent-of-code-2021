@@ -39,4 +39,4 @@ counts.inc(lines[0].last().toString())
 
 val max = counts.maxOf { it.value }
 val min = counts.minOf { it.value }
-println(max - min)
+println(max - min) // 2884513602164

@@ -1,5 +1,5 @@
 // general use N x M integer matrix
-open class Matrix(val n: Int, val m: Int) {
+open class Matrix(val n: Int, val m: Int, private val initial: Int = 0) {
     constructor(lines: List<String>) : this(lines.size, lines[0].length) {
         for (r in (0 until n)) {
             for (c in (0 until m)) {
@@ -7,7 +7,7 @@ open class Matrix(val n: Int, val m: Int) {
             }
         }
     }
-    private val d = Array(n) { IntArray(m) }
+    private val d = Array(n) { IntArray(m) { initial } }
     operator fun get(i: Int) = d[i]
     override fun toString() =
         d.joinToString("\n") {
