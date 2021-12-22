@@ -11,10 +11,6 @@ data class Node(
         if (!isNumber()) "[${leftChild},${rightChild}]"
         else value?.toString() ?: ""
 
-    // unlike explode and split, this does not mutate the tree - it returns a whole new tree
-    // (perhaps a bit inefficiently, and is tightly coupled to Node.toString, ah well)
-    operator fun plus(node: Node) = grow("[$this,$node]")
-
     fun isRoot() = this.parent == null
     fun isNumber() = value != null
     fun incNumber(n: Int) { value = value!! + n }
@@ -27,6 +23,11 @@ data class Node(
 
     fun magnitude(): Int = if (isNumber()) value!! else 3 * leftChild!!.magnitude() + 2 * rightChild!!.magnitude()
 }
+
+// unlike explode and split, this does not mutate the tree - it returns a whole new tree
+// (perhaps a bit inefficiently, and is tightly coupled to Node.toString, ah well)
+// moving this up inside the Node class results in a Kotlin codegen error!!
+operator fun Node.plus(node: Node) = grow("[$this,$node]")
 
 // --------------------------------------------------------
 // explode and split details (as extension functions so I can have null-safe targets)
