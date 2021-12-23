@@ -1,10 +1,15 @@
 // general use N x M integer matrix
-open class Matrix(val n: Int, val m: Int, private val initial: Int = 0) {
+open class Matrix(val n: Int, val m: Int = n, private val initial: Int = 0, var name: String = "") {
     constructor(lines: List<String>) : this(lines.size, lines[0].length) {
         for (r in (0 until n)) {
             for (c in (0 until m)) {
                 d[r][c] = lines[r][c].toString().toInt()
             }
+        }
+    }
+    constructor(vararg lines: String) : this(lines.size) {
+        for (i in (0 until n)) {
+            lines[i].split(" ").forEachIndexed { j, s ->  d[i][j] = s.toInt() }
         }
     }
     private val d = Array(n) { IntArray(m) { initial } }
@@ -13,6 +18,10 @@ open class Matrix(val n: Int, val m: Int, private val initial: Int = 0) {
         d.joinToString("\n") {
             it.joinToString(" ")
         }
+    fun setName(s: String): Matrix {
+        this.name = s
+        return this
+    }
 }
 
 class Octopi(lines: List<String>) : Matrix(lines) {
